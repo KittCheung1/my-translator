@@ -20,3 +20,5 @@ const handleLoadUserData = async () => {
 </div>
   )
 }
+
+export default Users;
