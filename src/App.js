@@ -1,11 +1,13 @@
 import logo from './logo.svg';
+import Login from "./Components/Views/Login";
 import './App.css';
 
 function App() {
-    return ( 
-	<div className = "App" >
-        <h1> My Translator </h1> 
-	</div>
+    return (
+        <div>
+        <Login/>
+      </div>
+    
     );
 }
 
