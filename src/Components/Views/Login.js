@@ -10,13 +10,15 @@ const handleLoadUserData = async () => {
       "https://trivia-game-noroff-api.herokuapp.com/trivia"
     );
     const result = await response.json();
+    console.log(result)
     setUsers(result);
   };
 
   return (
     <div className="App" >
     <h1> My Translator </h1>
-    <button onclick={handleLoadUserData}>Login</button>
+    <button onClick={handleLoadUserData}>Login</button>
+    <p>{users.username}</p>
 </div>
   )
 }
