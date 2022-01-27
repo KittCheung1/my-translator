@@ -9,9 +9,11 @@ const Users = () => {
   }
 
   const usernames = users.map((user) => {
-    if (name == user.username) {
+    if (name === user.username) {
+      //load new route
       return name
     }
+    //else return user to login page
   })
 
   //   async function getUser(name) {
@@ -25,20 +27,31 @@ const Users = () => {
       "https://trivia-game-noroff-api.herokuapp.com/trivia"
     );
     const result = await response.json();
-
     ;
     setUsers(result);
     console.log(result)
   };
 
-  return (
-    <div className="App" >
-      <h1> My Translator </h1>
+  // const handleTranslation =
 
-      <input onChange={handleInput} placeholder="Enter name"></input>
-      <button onClick={handleLoadUserData}>Login</button>
-      <p>{usernames}</p>
+  return (
+   
+    <div className="App" >
+      <div>
+       
+        <h1> My Translator </h1>
+
+        <input type="text" value={name} placeholder="Enter name" onInput={handleInput}></input>
+        <button onClick={handleLoadUserData}>Login</button>
+        <p>{usernames}</p>
+    
+      </div>
+
     </div>
+
+
+
+
   )
 }
 
