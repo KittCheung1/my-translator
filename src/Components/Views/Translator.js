@@ -3,11 +3,14 @@
 
 const Translator = () => {
 
-}
-return (
-    <div>
+    
+    return (
+        <div>
         <h1>Translator</h1>
         <input placeholder="enter word"></input>
-        <button onClick={handleTranslation}></button>
+        {/* <button onClick={handleTranslation}></button> */}
     </div>
 )
+}
+
+export default Translator
